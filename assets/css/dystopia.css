@@ -1,0 +1,357 @@
+body {
+padding: 0px;
+margin: 0 auto;
+background: black;
+overflow: hidden;
+
+}
+
+.hide {
+ display:none;
+}
+
+@font-face {
+  font-family: eurostile;
+  src: url('../fonts/EUROSTIB.ttf');
+}
+
+
+.backdrop {
+
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes go-right2{
+  from{
+    transform: translateY(56.75vh) translateX(-50.5vw) scale(1.5);
+    background-color:#8ffcff;
+  }
+  to{
+    transform: translateY(7vh) translateX(14vw) scale(0.5);
+    background-color:white;
+  }
+}
+
+@keyframes go-right1{
+  from{
+    transform: translateY(50.75vh) translateX(-40.5vw) scale(1.5);
+    color:#8ffcff;
+  }
+  to{
+    transform: translateY(4vh) translateX(5vw) scale(0.5);
+    color:white;
+  }
+}
+
+.dot{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+ animation: go-right2 0.00000000007s infinite;
+ border-radius: 0%;
+ z-index: 1;
+ opacity: 0.5;
+}
+
+#text {
+  color: white;
+  animation: go-right1 0.5s infinite;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.5;
+  font-size: 2.5vw;
+   z-index: 1;
+
+}
+
+#text2 {
+  color: white;
+  animation: go-right1 0.09s infinite;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.5;
+  font-size: 1.5vw;
+   z-index: 1;
+
+}
+
+@keyframes jet{
+  from{
+    transform: translateY(100vh) translateX(1600vw) scale(0.5) skewX(20deg);
+    opacity: 1;
+
+  }
+  to{
+    transform: translateY(-50vh) translateX(-400vw) scale(0.005) skewX(-20deg);
+    opacity: 0.5;
+
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.block:nth-child(1) {
+  background-color: black;
+}
+
+.block:nth-child(1) img {
+  position: absolute;
+
+  animation-name: jet;
+  animation-duration: 12s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  /* animation-delay: 20s; */
+
+
+  width: 40vw;
+  z-index: 6;
+}
+
+.block:nth-child(2) {
+  background-color: black;
+}
+
+.block:nth-child(2) img {
+  position: absolute;
+  background-color: black;
+  border-radius: 0%;
+  opacity: 0.2;
+  z-index: 1;
+  transform: translate(0%, 0%);
+  width: 40vw;
+  z-index: 0;
+}
+
+.block:nth-child(3) {
+  background-color: black;
+}
+
+.block:nth-child(3) img {
+  position: relative;
+  transform: translate(100%, 90%) rotate(180deg);
+  width: 10vw;
+  z-index: 1;
+}
+
+.block:nth-child(4) {
+  background-color: black;
+}
+
+.block:nth-child(4) img {
+  position: relative;
+  transform: translate(80%, 60%);
+  width: 12.5vw;
+  z-index: 2;
+}
+
+.block:nth-child(5) {
+  background-color: black;
+}
+
+.block:nth-child(5) img {
+  position: absolute;
+  /* transform: translate(50%, -50%); */
+  width: 20vw;
+  z-index: 0;
+  opacity: 0.75;
+  animation: skew 10s infinite;
+}
+
+
+.block:nth-child(6) {
+  background-color: black;
+}
+
+.block:nth-child(6) img {
+
+  z-index: 4;
+  opacity: 0.6;
+  animation: myOrbit 60s linear infinite;
+  width: 10vw;
+
+
+
+}
+
+@keyframes skew{
+
+ 0%    {
+    transform: translate(50%, -50%) skewY(10deg);
+       }
+
+ 50%   {
+    transform: translate(52%, -48%) skewY(-10deg);
+       }
+
+ 100%  {
+       transform: translate(50%, -50%) skewY(10deg);
+       }
+
+}
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(60px) rotate(0deg) scale(0.75); }
+    to   { transform: rotate(360deg) translateX(60px) rotate(-360deg) scale(0.75); }
+}
+
+@keyframes myOrbit2 {
+    from { transform: rotate(0deg) translateX(80px) rotate(0deg) scale(1); }
+    to   { transform: rotate(360deg) translateX(80px) rotate(-360deg) scale(1); }
+}
+
+@keyframes myOrbit3 {
+    from { transform: rotate(0deg) translateX(80px) rotate(0deg) scale(0.25); }
+    to   { transform: rotate(360deg) translateX(80px) rotate(-360deg) scale(0.25); }
+}
+
+@keyframes myOrbit4 {
+    from { transform: rotate(0deg) translateX(80px) rotate(0deg) scale(0.1); }
+    to   { transform: rotate(360deg) translateX(80px) rotate(-360deg) scale(0.1); }
+
+}
+
+#tower {
+  position: absolute;
+  transform: translate(-275%, -345%) scale(3);
+  width: 12.5vw;
+  z-index: 1;
+  opacity: 0.25;
+}
+
+#dome {
+  position: absolute;
+  transform: translate(160%, -60%) scale(0.5) rotate(180deg);
+  z-index: 0;
+
+}
+
+#dragon {
+  position: absolute;
+  transform: scale(0.2);
+  z-index: 0;
+  top: 40%;
+  left: 67.5%;
+  animation: myOrbit2 0.002s linear infinite;
+
+}
+
+#dragon2 {
+  position: absolute;
+  transform: scale(0.2);
+  z-index: 0;
+  top: 60%;
+  left: 77.5%;
+  animation: myOrbit3 0.002s linear infinite;
+
+}
+
+#dragon3 {
+  position: absolute;
+  transform: scale(0.2);
+  z-index: 0;
+  top: 60%;
+  left: 82%;
+  animation: myOrbit4 0.05s linear infinite;
+
+}
+
+#dolla {
+  color: green;
+  animation: go-right3 3s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.9;
+  font-size: 1vw;
+
+}
+
+#dolla2 {
+  color: green;
+  animation: go-right3 7s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.7;
+  font-size: 1.5vw;
+
+}
+
+#dolla3 {
+  color: green;
+  animation: go-right3 5s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.9;
+  font-size: 1.75vw;
+
+}
+
+#dolla4 {
+  color: green;
+  animation: go-right3 9s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.5;
+  font-size: 2vw;
+
+}
+
+#dolla5 {
+  color: green;
+  animation: go-right3 3.3s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.5;
+  font-size: 1.3vw;
+
+}
+
+#dolla6 {
+  color: green;
+  animation: go-right3 9s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.5;
+  font-size: 2.3vw;
+
+}
+
+#dolla7 {
+  color: green;
+  animation: go-right3 5s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.5;
+  font-size: 3.3vw;
+
+}
+
+#dolla8 {
+  color: green;
+  animation: go-right3 3s infinite reverse;
+  background-color: none;
+  font-family: eurostile;
+  opacity: 0.5;
+  font-size: 0.73vw;
+
+}
+
+@keyframes go-right3{
+  from{
+    transform: translateY(32.5vh) translateX(-100vw) scale(1);
+
+  }
+  to{
+    transform: translateY(32.5vh) translateX(50vw) scale(1);
+
+  }
+}

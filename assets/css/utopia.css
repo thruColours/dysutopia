@@ -1,0 +1,598 @@
+/*
+	This is a CSS comment. You can use them to leave messages
+	for yourself or others that won't be displayed or affect
+	the workings of a page.
+*/
+
+/*
+	This CSS file wil be linked to from an HTML file. The CSS
+	provides the style to the HTML elements.
+*/
+
+/* the selector body is used to select the <body> element in
+the HTML. The lines between the { and } are the style rules
+applied to the element specified by the selector. Uncomment
+the block (delete the * and / around it) to see the effects.*/
+
+/*body{
+	background: #FFCCCC;
+}*/
+
+body{
+padding:0px;
+margin:0px;
+background-color: #00BFFF;
+width: 100vw;
+height: 100em;
+}
+
+.hide {
+ display:none;
+
+}
+
+@font-face {
+  font-family: eurostile;
+  src: url('../fonts/EUROSTIB.ttf');
+}
+
+.textBox1 {
+
+position: static;
+transform: translate(-1%, 60%);
+opacity: 0.6;
+
+}
+
+#text1 {
+  font-family: eurostile;
+  text-align: center;
+  font-size: 2.5vw;
+  color: white;
+  padding: 50vh;
+  line-height: 120%;
+}
+
+.bground {
+ width: 100vw;
+ height: 100em;
+ background-image: url('../images/blueskyTrans.png');
+ background-size: cover;
+  /* display: inline-block; */
+ position: relative;
+
+  z-index: 0;
+
+}
+
+/* .bground {
+  width: 100vw;
+  height: 2000px;
+  background: #00FA9A;
+  z-index: -1;
+  display: inline-block;
+} */
+
+/* .sleft {
+  position: absolute;
+
+  float: left;
+  z-index: 2;
+  top: 60vh;
+  left: 2vw;
+} */
+
+/* .sright {
+
+  position: absolute;
+
+  z-index: 2;
+  top: 50em;
+  right: 14em;
+
+  width:200px;
+
+} */
+
+/* .sright img {
+  width: 100%;
+  height: auto;
+} */
+
+/* .sright2 {
+
+position: relative;
+
+  float: right;
+  z-index: 2;
+  top: -20em;
+  right: 8em;
+  width: 20em;
+  height: 20em;
+
+} */
+
+/* .sright2 img {
+  width: auto;
+  height: auto;
+  max-height: 60vh;
+  max-width: 60vw;
+
+
+}  */
+
+@keyframes float {
+  	0% {
+
+  		transform: translatey(15em) translateX(-50%);
+  	}
+  	50% {
+
+  		transform: translatey(0em) translateX(-50%);
+  	}
+  	100% {
+
+  		transform: translatey(15em) translateX(-50%);
+  	}
+  }
+
+.floaty {
+  position: absolute;
+  /* background-image: url('../image/floatisland.png'); */
+  z-index: 2;
+  /* top: 20vh;
+  left: 50vh; */
+
+  /* right: 50vh; */
+
+  left: 50%;
+
+  top: 25%;
+
+  animation: float 20s ease-in-out infinite;
+
+  width: 25vw;
+  max-width: 366px;
+  min-width: 180px;
+
+}
+
+.floaty img {
+  width: 100%;
+}
+
+.sign2 {
+
+  position: absolute;
+  /* background-image: url('../image/floatisland.png'); */
+  z-index: 1;
+  /* top: 20vh;
+  left: 50vh; */
+
+  /* right: 50vh; */
+
+  left: 44%;
+
+  top: 45%;
+
+  animation: myOrbit 20s ease-in-out infinite;
+
+  width: 3vw;
+  max-width: 150px;
+  min-width: 25px;
+  opacity: 0.8;
+
+}
+.sign2 img {
+width: 100%;
+}
+
+/* div:nth-child(1n) {
+  width: 100vw;
+  height: 100em;
+  background-image: url('../images/bluesky2.jpeg');
+  z-index: 0;
+  display: inline-block;
+  position: static;
+} */
+
+/* div:nth-child(2n) {
+  position: static;
+  display: inline-block;
+  float: left;
+  z-index: 2;
+} */
+
+/* div:nth-child(3n) {
+  position: static;
+  display: inline-block;
+  float: right;
+  z-index: 2;
+  width: 100px;
+  } */
+
+/* .city {
+position: relative;
+display: inline-block;
+width: 100vw;
+height: 100em;
+} */
+
+.gridCity {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
+  grid-gap: 0px;
+  width: 100vw;
+
+  /* height: 100vh; */
+}
+
+
+/* .city > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+
+} */
+
+.city:nth-child(1) img {
+
+  max-width: 10vw;
+  min-width: 9vw;
+  position: absolute;
+  /* left: 40vw; */
+  /* width: 100%; */
+  /* top: -25em; */
+  transform: translate(67.5%, -70%);
+  z-index: 2;
+  opacity: 0.88;
+}
+
+
+.city:nth-child(3) img {
+
+  max-width: 10vw;
+  min-width: 9vw;
+  position: absolute;
+  /* left: 40vw; */
+  /* width: 100%; */
+  /* top: -25em; */
+  transform: translate(95%, -35%);
+  z-index: 2;
+  opacity: 0.88;
+
+ }
+
+ /* @keyframes float2{
+   0%{
+     transform: translateX(10vw) translateY(20vh);
+   }
+   25%{
+     transform: translateX( calc(10vw - 100%) ) translateY(0);
+   }
+   50%{
+     transform: translateX( calc(20vw - 100%) ) translateY( calc(20vh - 100%) );
+   }
+   75%{
+     transform: translateX(0) translateY( calc(20vh - 100%) );
+   }
+ } */
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(60px) rotate(0deg) ; }
+    to   { transform: rotate(360deg) translateX(60px) rotate(-360deg) ; }
+}
+
+@keyframes myOrbit2 {
+   0% { transform: rotate(0deg) translateX(40px) rotate(0deg) scale(1); }
+   50%   { transform: rotate(180deg) translateX(40px) rotate(360deg) scale(0.5); }
+   100%  { transform: rotate(360deg) translateX(40px) rotate(-360deg) scale(1); }
+
+}
+
+
+
+#lantern img {
+  max-width: 2.5vw;
+  min-width: 1.25vw;
+  position: relative;
+  z-index: 4;
+
+  left: 30vw;
+  /* top: 260vh;  */
+  animation: myOrbit2 20s linear infinite;
+}
+
+#lantern2 img {
+  max-width: 2vw;
+  min-width: 1vw;
+  position: relative;
+  z-index: 4;
+
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit2 26s linear infinite;
+  left: 20vw;
+  opacity: 0.9;
+}
+
+#lantern3 img {
+  max-width: 1vw;
+  min-width: 0.5vw;
+  position: relative;
+  z-index: 4;
+
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit2 36s linear infinite;
+  left: 0vw;
+  opacity: 0.8;
+}
+
+#lantern4 img {
+  max-width: 1vw;
+  min-width: 0.5vw;
+  position: relative;
+  z-index: 4;
+  top: 1400%;
+
+  animation: myOrbit2 36s linear infinite;
+  left: 110%;
+
+  opacity: 0.9;
+}
+
+#lantern5 img {
+  max-width: 1vw;
+  min-width: 0.5vw;
+  position: relative;
+  z-index: 4;
+  top: 1100%;
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit2 30s linear infinite;
+  left: 110%;
+
+  opacity: 0.9;
+}
+
+#lantern6 img {
+  max-width: 2.5vw;
+  min-width: 1.25vw;
+  position: relative;
+  z-index: 4;
+
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit2 14s ease-in-out infinite;
+  right: 35vw;
+  top: 55vh;
+  opacity: 0.9;
+}
+
+#lantern7 img {
+  max-width: 4.5vw;
+  min-width: 2.25vw;
+  position: relative;
+  z-index: 4;
+
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit 80s linear infinite;
+  left: 60vw;
+  top: 20vh;
+  opacity: 0.9;
+
+}
+
+#lantern8 img {
+  max-width: 2vw;
+  min-width: 1vw;
+  position: relative;
+  z-index: 4;
+
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit2 88s ease-in-out infinite;
+  left: -10vw;
+  top: 20vh;
+  opacity: 0.8;
+
+}
+
+#lantern9 img {
+  max-width: 2vw;
+  min-width: 1vw;
+  position: relative;
+  z-index: 4;
+
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit2 20s ease infinite;
+  left: -10vw;
+  top: 60vh;
+
+
+}
+
+#lantern10 img {
+  max-width: 3vw;
+  min-width: 1vw;
+  position: relative;
+  z-index: 6;
+
+  /* left: 60vw;
+  top: 230vh; */
+  animation: myOrbit 30s linear infinite;
+  left: 70vw;
+  top: 60vh;
+
+}
+
+#lightSign img {
+
+  max-width: 22vw;
+  min-width: 8vw;
+  position: relative;
+  z-index: 3;
+
+
+  animation: myOrbit 70s ease-out infinite;
+  left: 30%;
+  top: 60%;
+  opacity: 0.95;
+
+}
+
+
+
+
+/* @keyframes floatHut {
+  	0% {
+
+  		transform: translatey(90em) translateX(-50%);
+  	}
+  	50% {
+
+  		transform: translatey(88em) translateX(-50%);
+  	}
+  	100% {
+
+  		transform: translatey(90em) translateX(-50%);
+  	}
+  } */
+
+/* .floatingHut {
+
+position: absolute;
+z-index: 1;
+right: 80%;
+top: 150vh;
+width: 1vw;
+max-width: 200px;
+min-width: 100px;
+z-index: 3;
+
+}
+
+.floatingHut img {
+  width: 100%;
+  opacity: 0.9;
+  transform: rotate(-2.5deg);
+} */
+
+
+.backdrop {
+
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 500px;
+
+
+
+ /* background-image: url('../images/lowerCity2.png'); */
+ /* background-size: cover; */
+  /* display: inline-block; */
+ position: absolute;
+
+  z-index: 2;
+
+  background-size: cover;
+
+  /* max-width:250%;
+  max-height:250%; */
+
+}
+
+.backdrop img {
+  width: 100%;
+  transform: translateY(5%);
+
+}
+
+.blueskyTransInvert {
+
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 500px;
+  opacity: 1;
+ position: absolute;
+
+  z-index: 0;
+
+}
+
+.blueskyTransInvert img {
+  width: 100%;
+
+}
+
+#solarpanels img {
+  max-width: 4vw;
+  min-width: 2vw;
+  position: absolute;
+  /* left: 40vw; */
+  /* width: 100%; */
+  /* top: -25em; */
+
+  transform: translate(-100%, 170%)  rotate(80deg);
+  z-index: 2;
+
+
+
+
+}
+
+#solarpanels2 {
+  width: 32vw;
+    max-width: 35vw;
+    min-width: 17.5vw;
+    position: absolute;
+    /* left: 40vw; */
+    /* width: 100%; */
+    /* top: -25em; */
+
+    transform: translate(125%, 255%);
+    z-index: 3;
+    opacity: 0.9;
+
+
+}
+
+#solarpanels2 img {
+  width: 100%;
+
+}
+
+
+/* @keyframes go-right2{
+  from{
+    transform: translateY(50em) translateX(25.5em) rotate(45deg);
+    background-color:yellow;
+  }
+  to{
+    transform: translateY(49.5em) translateX(74em);
+    background-color:yellow;
+  }
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  animation: go-right2 0.0000006s infinite;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+} */
+
+
+/* @media only screen and (min-width: 1000px) {
+
+  .sright {
+    width: auto;
+  }
+
+} */

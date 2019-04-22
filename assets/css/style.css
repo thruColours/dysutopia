@@ -1,0 +1,100 @@
+/*
+	This is a CSS comment. You can use them to leave messages
+	for yourself or others that won't be displayed or affect
+	the workings of a page.
+*/
+
+/*
+	This CSS file wil be linked to from an HTML file. The CSS
+	provides the style to the HTML elements.
+*/
+
+/* the selector body is used to select the <body> element in
+the HTML. The lines between the { and } are the style rules
+applied to the element specified by the selector. Uncomment
+the block (delete the * and / around it) to see the effects.*/
+
+/*body{
+	background: #FFCCCC;
+}*/
+
+body {
+padding: 0px;
+margin: 0 auto;
+background-color: black;
+overflow: hidden;
+}
+
+.hide {
+ display:none;
+}
+
+.wrapper {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Colours & type layout. Does not effect the grid. */
+.wrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.wrapper > div:nth-child(1n) {
+  /* background-color: black; */
+
+
+}
+
+.wrapper > div:nth-child(2n) {
+  /* background-color: black; */
+}
+
+a {
+color: blue;
+text-decoration: none;
+}
+
+/* @keyframes go-right{
+  from{
+    transform: translateY(26em) translateX(60em) rotate(45deg);
+    background-color:blue;
+  }
+  to{
+    transform: translateY(500em) translateX(500em) rotate(360deg);
+    background-color:red;
+  }
+  to{
+    transform: translateY(26.25em) translateX(26.25em);
+    background-color:#99ccff;
+  }
+} */
+
+@keyframes go-right2{
+  from{
+    transform: translateY(49.75vh) translateX(25.5vw) rotate(45deg);
+    background-color:red;
+  }
+  to{
+    transform: translateY(49.75vh) translateX(74vw);
+    background-color:blue;
+  }
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  /* background: #add8e6; */
+  /* UNCOMMENT LINE 15 TO SEE THE ANIMATION */
+ animation: go-right2 0.000000000000006s infinite;
+ display: inline-block;
+ border-radius: 50%;
+}
